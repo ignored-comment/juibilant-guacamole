@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2021_04_27_150608) do
   create_table "harvests", force: :cascade do |t|
     t.bigint "plot_id"
     t.bigint "plant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["plant_id"], name: "index_harvests_on_plant_id"
     t.index ["plot_id"], name: "index_harvests_on_plot_id"
   end
@@ -33,6 +35,8 @@ ActiveRecord::Schema.define(version: 2021_04_27_150608) do
     t.string "name"
     t.string "description"
     t.integer "days_to_harvest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "plots", force: :cascade do |t|

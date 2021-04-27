@@ -1,4 +1,4 @@
-class CreateHarvests < ActiveRecord::Migration[5.2]
+class CreateHarvest < ActiveRecord::Migration[5.2]
   def change
     create_table :harvests do |t|
       t.references :plot, foreign_key: true
