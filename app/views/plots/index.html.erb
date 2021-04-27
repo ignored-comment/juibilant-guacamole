@@ -5,6 +5,7 @@
   <% plot.plants.each do |plant| %>
     <section id="plant-<%=plant.id %>">
     <p>Plant name: <%= plant.name %></p>
+    <%= link_to "Remove this plant", remove_this_plant_path(:plant => plant.id, :plot => plot.id), method: :delete %><br>
     </section>
   <% end %><br>
 <% end %><br>
