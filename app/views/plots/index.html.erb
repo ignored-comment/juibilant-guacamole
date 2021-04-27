@@ -3,6 +3,8 @@
 <% @plots.each do |plot| %>
   <p>Plot number: <%= plot.number %></p>
   <% plot.plants.each do |plant| %>
+    <section id="plant-<%=plant.id %>">
     <p>Plant name: <%= plant.name %></p>
+    </section>
   <% end %><br>
 <% end %><br>
