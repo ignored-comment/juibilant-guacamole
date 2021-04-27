@@ -1,0 +1,7 @@
+<h1><%= @garden.name %></h1>
+
+<p><%= @garden.name %>'s stats: </p>
+<p>Organic: <%= @garden.organic %>
+<p>Unique plants under 100 days to harvest: <% @garden.unique_harvest_under_100_days.each do |plant| %></p>
+  <%= plant.name %>
+<% end %>

@@ -22,6 +22,8 @@ RSpec.describe "Garden's Show Page" do
 
   describe "as a visitor, when I visit a garden's show page" do
     it "shows me the garden's name and organic attributes, as well as a list of all the plants in that garden's plots" do
+      visit "/gardens/#{@turing_garden.id}"
+
       expect(page).to have_content("Turing Community Garden")
       expect(page).to have_content("Organic: true")
       expect(page).to have_content("Heirloom Tomato")
